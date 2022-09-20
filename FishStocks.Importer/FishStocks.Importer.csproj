@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Apis" Version="1.57.0" />
     <PackageReference Include="Tesseract" Version="4.1.1" />
   </ItemGroup>
 

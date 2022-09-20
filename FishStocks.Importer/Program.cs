@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using Tesseract;
 
 namespace Fishstocks.Importer
@@ -11,7 +12,7 @@ namespace Fishstocks.Importer
 
         public static void Main(string[] args)
         {
-            var testImagePath = "C:\\Users\\bridg\\source\\repos\\FishStocks.Importer\\FishStocks.Importer\\unnamed.png";
+            var testImagePath = "C:\\Users\\bridg\\source\\repos\\FishStocks\\FishStocks.Importer\\unnamed.png";
             if (args.Length > 0)
             {
                 testImagePath = args[0];
@@ -103,11 +104,32 @@ namespace Fishstocks.Importer
                         CleanList.Add(split);
                     }
                 }
-                //ImportedText
             }
-            foreach (var thing in CleanList)
+            var splitIndex = CleanList.Count() / 2;
+            var fishList = new List<string>();
+            var priceList = new List<string>();
+            var fishPriceIndex = new Dictionary<string, string>();
+            for (int i = 0; i < splitIndex; i++)
             {
-                Console.WriteLine(thing);
+                if (CleanList[i] != " ")
+                {
+                    fishList.Add(CleanList[i]);
+                }
+            }
+            for (int i = splitIndex; i < splitIndex * 2; i++)
+            {
+                if (CleanList[i] != " ")
+                {
+                    priceList.Add(CleanList[i]);
+                }
+            }
+            for (int i = 0; i < fishList.Count(); i++)
+            {
+                fishPriceIndex.Add(fishList[i], priceList[i]);
+            }
+            foreach (var item in fishPriceIndex)
+            {
+                Console.WriteLine("Key: {0} Value: {1}",item.Key, item.Value);
             }
         }
 

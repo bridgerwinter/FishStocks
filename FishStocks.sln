@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.32804.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishStocks.Importer", "FishStocks.Importer\FishStocks.Importer.csproj", "{7B694E2E-A55D-45F3-9F28-56A9BB651610}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishStocks.Importer", "FishStocks.Importer\FishStocks.Importer.csproj", "{7B694E2E-A55D-45F3-9F28-56A9BB651610}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishStocks.Library", "FishStocks.Library\FishStocks.Library.csproj", "{730C981C-0824-469E-BACC-9460E1793D86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishStocks.Library", "FishStocks.Library\FishStocks.Library.csproj", "{730C981C-0824-469E-BACC-9460E1793D86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishStocks.Website", "FishStocks.Website\FishStocks.Website.csproj", "{13E60D2C-AF49-4208-9909-B182EF695845}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,12 @@ Global
 		{730C981C-0824-469E-BACC-9460E1793D86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{730C981C-0824-469E-BACC-9460E1793D86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{730C981C-0824-469E-BACC-9460E1793D86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E60D2C-AF49-4208-9909-B182EF695845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E60D2C-AF49-4208-9909-B182EF695845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E60D2C-AF49-4208-9909-B182EF695845}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{13E60D2C-AF49-4208-9909-B182EF695845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E60D2C-AF49-4208-9909-B182EF695845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E60D2C-AF49-4208-9909-B182EF695845}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

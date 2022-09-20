@@ -11,7 +11,8 @@ namespace FishStocks.Library
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public Fish Fish { get; set; }
+        public int FishId { get; set; }
+        public string Price { get; set; }
         public DateTime DateEntered { get; set; }
 
     }
