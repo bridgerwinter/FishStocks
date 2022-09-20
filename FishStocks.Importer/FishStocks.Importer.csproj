@@ -9,10 +9,23 @@
 
   <ItemGroup>
     <PackageReference Include="Google.Apis" Version="1.57.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
     <PackageReference Include="Tesseract" Version="4.1.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="FishStocksDataset.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FishStocksDataset.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="FishStocksDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FishStocksDataset.Designer.cs</LastGenOutput>
+    </None>
     <None Update="tessdata\eng.traineddata">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

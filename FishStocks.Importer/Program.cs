@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using FishStocks.Importer.FishStocksDatasetTableAdapters;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
@@ -9,6 +11,7 @@ namespace Fishstocks.Importer
     class Program
     {
         public static List<string> ImportedText = new List<string>();
+        private static readonly string ConnectionString = @"Data Source=SUNBEAR\SQLEXPRESS;Initial Catalog = FishStocks; Integrated Security = True";
 
         public static void Main(string[] args)
         {
@@ -99,7 +102,7 @@ namespace Fishstocks.Importer
                 var splitList = item.Split('\n');
                 foreach (var split in splitList)
                 {
-                    if (split != String.Empty)
+                    if (!String.IsNullOrWhiteSpace(split))
                     {
                         CleanList.Add(split);
                     }
@@ -107,8 +110,8 @@ namespace Fishstocks.Importer
             }
             var splitIndex = CleanList.Count() / 2;
             var fishList = new List<string>();
-            var priceList = new List<string>();
-            var fishPriceIndex = new Dictionary<string, string>();
+            var priceList = new List<decimal>();
+            var fishPriceIndex = new Dictionary<string, decimal>();
             for (int i = 0; i < splitIndex; i++)
             {
                 if (CleanList[i] != " ")
@@ -118,9 +121,10 @@ namespace Fishstocks.Importer
             }
             for (int i = splitIndex; i < splitIndex * 2; i++)
             {
+                var val = decimal.Parse(CleanList[i], NumberStyles.Currency);
                 if (CleanList[i] != " ")
                 {
-                    priceList.Add(CleanList[i]);
+                    priceList.Add(val);
                 }
             }
             for (int i = 0; i < fishList.Count(); i++)
@@ -131,6 +135,8 @@ namespace Fishstocks.Importer
             {
                 Console.WriteLine("Key: {0} Value: {1}",item.Key, item.Value);
             }
+            AddFishToDatabase(fishList);
+            AddToDatabase(fishPriceIndex);
         }
 
         private class ResultPrinter
@@ -157,6 +163,35 @@ namespace Fishstocks.Importer
                 logger.Log("Symbol text: \"{0}\"", iter.GetText(PageIteratorLevel.Symbol));
             }
         }
+
+        public static void AddToDatabase(Dictionary<string, decimal> pairs)
+        {
+            SqlConnection sqlConnection;
+            sqlConnection = new SqlConnection(ConnectionString);
+            using (sqlConnection)
+            {
+                FishTransactionTableAdapter fishTransactionTableAdapter = new FishTransactionTableAdapter();
+                foreach (var item in pairs)
+                {
+                    fishTransactionTableAdapter.Insert(item.Value, DateTime.Now, item.Key);
+                }
+            }
+        }
+        public static void AddFishToDatabase(List<string> fish)
+        {
+            SqlConnection sqlConnection;
+            sqlConnection = new SqlConnection(ConnectionString);
+            using (sqlConnection)
+            {
+                FishTableAdapter fishTableAdapter = new FishTableAdapter();
+                foreach (var item in fish)
+                {
+                    fishTableAdapter.Insert(item);
+                }
+            }
+
+        }
+
     }
 }
 

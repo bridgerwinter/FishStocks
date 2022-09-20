@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,12 @@ using System.Threading.Tasks;
 
 namespace FishStocks.Website
 {
-    internal class Database
+    public class Database
     {
+        readonly SQLiteAsyncConnection database;
+        public Database(string dbPath)
+        {
+
+        }
     }
 }
