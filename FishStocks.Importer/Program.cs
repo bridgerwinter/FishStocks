@@ -135,8 +135,8 @@ namespace Fishstocks.Importer
             {
                 Console.WriteLine("Key: {0} Value: {1}",item.Key, item.Value);
             }
-            AddFishToDatabase(fishList);
-            AddToDatabase(fishPriceIndex);
+            //AddFishToDatabase(fishList);
+            //AddToDatabase(fishPriceIndex);
         }
 
         private class ResultPrinter

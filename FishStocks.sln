@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishStocks.Importer", "Fish
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishStocks.Library", "FishStocks.Library\FishStocks.Library.csproj", "{730C981C-0824-469E-BACC-9460E1793D86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishStocks.Website", "FishStocks.Website\FishStocks.Website.csproj", "{13E60D2C-AF49-4208-9909-B182EF695845}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishStocks.Website", "FishStocks.Website\FishStocks.Website.csproj", "{A76CFA32-2ED3-4F24-B86C-ADEE50DFA3BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +23,10 @@ Global
 		{730C981C-0824-469E-BACC-9460E1793D86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{730C981C-0824-469E-BACC-9460E1793D86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{730C981C-0824-469E-BACC-9460E1793D86}.Release|Any CPU.Build.0 = Release|Any CPU
-		{13E60D2C-AF49-4208-9909-B182EF695845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13E60D2C-AF49-4208-9909-B182EF695845}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13E60D2C-AF49-4208-9909-B182EF695845}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{13E60D2C-AF49-4208-9909-B182EF695845}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13E60D2C-AF49-4208-9909-B182EF695845}.Release|Any CPU.Build.0 = Release|Any CPU
-		{13E60D2C-AF49-4208-9909-B182EF695845}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A76CFA32-2ED3-4F24-B86C-ADEE50DFA3BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A76CFA32-2ED3-4F24-B86C-ADEE50DFA3BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A76CFA32-2ED3-4F24-B86C-ADEE50DFA3BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A76CFA32-2ED3-4F24-B86C-ADEE50DFA3BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,39 @@
 ﻿@page "/"
+@inject HttpClient Http
+@inject DataAccessService da
+@using FishStocks.Library
 
-<h1>Hello, world!</h1>
+<PageTitle>Index</PageTitle>
 
-Welcome to your new app.
+@if (fishTransactions == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <tbody>
+            @foreach (var transaction in fishTransactions)
+            {
+                <tr>
+                    <td>@transaction.Name</td>
+                    <td>@transaction.DateEntered</td>
+                    <td>@transaction.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+
+
+@code{
+    public Fish fish;
+    public List<FishTransaction> fishTransactions;
+
+    protected override async Task OnInitializedAsync()
+    {
+        fishTransactions = await da.GetTransactionsAsync();
+
+    }
+}
