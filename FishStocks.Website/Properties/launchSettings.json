@@ -1,4 +1,7 @@
 {
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=SUNBEAR\\SQLEXPRESS;Initial Catalog = FishStocks; Integrated Security = True\";"
+  },
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,

@@ -1,0 +1,45 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "FishStocksContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Data\\FishStocks",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "FishStocks.Website",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Fish]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FishTransaction]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "SUNBEAR\\SQLEXPRESS.FishStocks",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

@@ -23,4 +23,10 @@
     <ProjectReference Include="..\FishStocks.Library\FishStocks.Library.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Properties\launchSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
